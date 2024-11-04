@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,5 +22,61 @@
 </head>
 <body>
     <h1>Dalam Kontak Repository</h1>
+</body>
+</html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalam Kontak Repository</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; 
+        }
+        h1 {
+            font-size: 5em; 
+            color: #333; 
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dalam Kontak Repository</h1>
+    <textarea id="mavenCode" readonly>
+maven { url 'http://repohub.dkon.app' } // add repository
+    </textarea>
+    <button onclick="copyToClipboard()">Copy Code</button>
+
+    <script>
+        function copyToClipboard() {
+            const textarea = document.getElementById('mavenCode');
+            textarea.select();
+            document.execCommand('copy');
+            alert('Code copied to clipboard!');
+        }
+    </script>
 </body>
 </html>
